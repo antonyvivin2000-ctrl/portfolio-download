@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://vivin27.netlify.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=b29389ee-cc8b-425e-9997-7caff94756d2
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=b29389ee-cc8b-425e-9997-7caff94756d2">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antony Vivin A J — Software Developer</title>
+<meta name="description" content="Portfolio of Antony Vivin A J — Computer Science &amp; Engineering student and aspiring software developer.">
+
+<!-- Google Fonts used throughout styles.css: Space Grotesk (headings), Inter (body), JetBrains Mono (code/labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Webpage, Complete_files/css2" rel="stylesheet">
+
+<!-- Layout, theme and component styles live in styles.css (kept separate from markup) -->
+<link rel="stylesheet" href="./Webpage, Complete_files/styles.css">
+</head>
+<body>
+
+<!-- Skip link: first focusable element, lets keyboard users bypass the sidebar nav -->
+<a class="skip-link" href="https://vivin27.netlify.app/#main-content">Skip to main content</a>
+
+<div class="shell">
+
+  <!-- ============ SIDEBAR / SITE NAVIGATION ============
+       Acts as the persistent header + nav for this single-page layout.
+       Each button toggles which <section> in <main> is visible (see script.js). -->
+  <header class="sidebar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">AV</div>
+      <div class="brand-text">Antony Vivin<span>A J</span></div>
+    </div>
+
+    <nav aria-label="Primary">
+      <ul class="nav-list" id="navList">
+        <li class="nav-item"><button type="button" data-target="home" aria-current="page"><span class="dot" aria-hidden="true"></span>Overview</button></li>
+        <li class="nav-item"><button type="button" data-target="projects"><span class="dot" aria-hidden="true"></span>Projects</button></li>
+        <li class="nav-item"><button type="button" data-target="skills"><span class="dot" aria-hidden="true"></span>Skills</button></li>
+        <li class="nav-item"><button type="button" data-target="experience"><span class="dot" aria-hidden="true"></span>Experience</button></li>
+        <li class="nav-item"><button type="button" data-target="contact"><span class="dot" aria-hidden="true"></span>Contact</button></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-line"><span class="status-pulse" aria-hidden="true"></span>Open to internships &amp; collaborations</div>
+    </div>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main-content">
+
+    <!-- ---------- HOME / HERO ---------- -->
+    <section class="section active" id="home" aria-labelledby="home-heading">
+
+      <div class="hero">
+
+        <!-- Decorative animated line chart; hidden from assistive tech -->
+        <svg class="hero-chart" viewBox="0 0 420 240" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <defs>
+            <lineargradient id="chartGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#4FD8E8"></stop>
+              <stop offset="100%" stop-color="#8C7AFF"></stop>
+            </lineargradient>
+            <lineargradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#4FD8E8" stop-opacity="0.18"></stop>
+              <stop offset="100%" stop-color="#4FD8E8" stop-opacity="0"></stop>
+            </lineargradient>
+          </defs>
+          <path class="fill-area" d="M0,190 L30,175 L60,185 L90,140 L120,155 L150,110 L180,125 L210,80 L240,95 L270,60 L300,72 L330,40 L360,55 L390,25 L420,35 L420,240 L0,240 Z"></path>
+          <path d="M0,190 L30,175 L60,185 L90,140 L120,155 L150,110 L180,125 L210,80 L240,95 L270,60 L300,72 L330,40 L360,55 L390,25 L420,35"></path>
+        </svg>
+
+        <p class="hero-eyebrow"><span class="status-pulse" aria-hidden="true"></span>Chennai, India</p>
+
+        <h1 id="home-heading">I build software solutions and explore ideas through technology.</h1>
+        <p class="hero-sub">Currently focused on strengthening my development skills and building real-world projects.</p>
+
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary" onclick="showSection(&#39;projects&#39;)">View projects</button>
+          <button type="button" class="btn btn-secondary" onclick="showSection(&#39;contact&#39;)">Get in touch</button>
+        </div>
+
+        <p class="hero-bio">I'm <strong>Antony Vivin</strong>, a Computer Science and Engineering student passionate about technology and software development. I enjoy turning ideas into practical applications while continuously improving my programming and problem-solving skills. I'm currently exploring different areas of development and working on projects that help me gain hands-on experience. I'm always open to learning, building, and collaborating on interesting ideas.</p>
+
+        <div class="terminal" role="img" aria-label="Terminal summary: role, CSE Student and aspiring software developer; stack, C, C++, Python, HTML, CSS, JavaScript; tools, Git, GitHub, VS Code; also building projects, DSA and modern tech.">
+          <div class="terminal-head" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="terminal-body" aria-hidden="true">
+            <div class="line"><span class="prompt">$</span> whoami</div>
+            <div class="line"><span class="key">role</span>: <span class="val">CSE Student | Aspiring Software Developer</span></div>
+            <div class="line"><span class="key">stack</span>: <span class="val">C · C++ · Python · HTML · CSS · JavaScript</span></div>
+            <div class="line"><span class="key">tools</span>: <span class="val">Git · GitHub · VS Code</span></div>
+            <div class="line"><span class="key">also_building</span>: <span class="val">Projects, DSA, and modern tech</span></div>
+            <div class="line"><span class="prompt">$</span> <span class="val">_</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------- PROJECTS ---------- -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <p class="section-tag">02 · Projects</p>
+      <h2 class="section-title" id="projects-heading">What I've been building</h2>
+      <p class="section-lede">Projects built while learning and applying core programming and development skills.</p>
+
+      <h3 class="project-section-heading">🛠️ In Progress</h3>
+      <div class="grid grid-2">
+
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h4 class="card-title">RISE 2.0</h4>
+              <p class="card-role">Development project</p>
+            </div>
+            <span class="badge badge-progress">In progress</span>
+          </div>
+          <p class="card-desc">A project currently in development as part of ongoing skill-building and hands-on practice.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h4 class="card-title">RailSaathi</h4>
+              <p class="card-role">Development project</p>
+            </div>
+            <span class="badge badge-progress">In progress</span>
+          </div>
+          <p class="card-desc">A project currently in development as part of ongoing skill-building and hands-on practice.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!--
+        PLACEHOLDER GUIDANCE:
+        To add a project screenshot/thumbnail to a card, insert an <img>
+        above .card-top, e.g.:
+          <img src="assets/rise-2-0-screenshot.png" alt="Screenshot of the RISE 2.0 dashboard" class="card-thumb">
+        Add a matching ".card-thumb { width:100%; border-radius:8px; margin-bottom:14px; }"
+        rule to styles.css, and drop the actual image file into an /assets folder
+        alongside index.html.
+      -->
+    </section>
+
+    <!-- ---------- SKILLS ---------- -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <p class="section-tag">03 · Skills</p>
+      <h2 class="section-title" id="skills-heading">Tools I work with</h2>
+      <p class="section-lede">Core languages plus the tools used across current builds.</p>
+
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="chip-row">
+          <div class="chip">C</div>
+          <div class="chip">C++</div>
+          <div class="chip">Python</div>
+          <div class="chip">JavaScript</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Web / Stack</h3>
+        <div class="chip-row">
+          <div class="chip">HTML</div>
+          <div class="chip">CSS</div>
+          <div class="chip">JavaScript</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <div class="chip-row">
+          <div class="chip">Git</div>
+          <div class="chip">GitHub</div>
+          <div class="chip">VS Code</div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Currently exploring</h3>
+        <div class="chip-row">
+          <div class="chip">Data Structures &amp; Algorithms</div>
+          <div class="chip">Full-Stack Development</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- EXPERIENCE ---------- -->
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <p class="section-tag">04 · Experience</p>
+      <h2 class="section-title" id="experience-heading">Background</h2>
+      <p class="section-lede">Education so far.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <p class="tl-period">2026 – Present</p>
+          <h3 class="tl-title">B.E / B.Tech, Computer Science Engineering</h3>
+          <p class="tl-org">Easwari Engineering College</p>
+          <p class="tl-desc">Currently pursuing Computer Science and Engineering, developing programming, problem-solving, and software development skills.</p>
+        </div>
+      </div>
+
+      <ul class="cert-list">
+        <li class="cert-item"><span class="mark" aria-hidden="true">✓</span>NPTEL Certification</li>
+        <li class="cert-item"><span class="mark" aria-hidden="true">✓</span>1M1B Certification</li>
+        <li class="cert-item"><span class="mark" aria-hidden="true">✓</span>AWS Certification</li>
+        <li class="cert-item"><span class="mark" aria-hidden="true">✓</span>Saylor Engineering Certificate</li>
+      </ul>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <p class="section-tag">05 · Contact</p>
+      <h2 class="section-title" id="contact-heading">Let's talk</h2>
+      <p class="section-lede">Open to internship opportunities, collaborations, and anything full-stack or markets-related.</p>
+
+      <div class="contact-grid">
+
+        <a class="contact-card" href="mailto:antonyvivin2000@gmail.com">
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4FD8E8" stroke-width="1.8"><path d="M3 6l9 7 9-7M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z"></path></svg>
+          </span>
+          <span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">antonyvivin2000@gmail.com</span>
+          </span>
+        </a>
+
+        <a class="contact-card" href="tel:+917418605719">
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#35D48C" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0122 16.92z"></path></svg>
+          </span>
+          <span>
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+91 74186 05719</span>
+          </span>
+        </a>
+
+        <a class="contact-card" href="https://github.com/antonyvivin2000-ctrl" target="_blank" rel="noopener">
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#8C7AFF"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 007.86 10.94c.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+          </span>
+          <span>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">antonyvivin2000-ctrl</span>
+          </span>
+        </a>
+
+        <a class="contact-card" href="https://www.linkedin.com/in/antony-vivin-7b64593a8" target="_blank" rel="noopener">
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#4FD8E8"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+          </span>
+          <span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">antony-vivin</span>
+          </span>
+        </a>
+
+      </div>
+
+      <!-- ---------- CONTACT FORM ----------
+           Client-side only for now (see script.js for the note on wiring
+           up a real backend such as Formspree or EmailJS before launch). -->
+      <div class="contact-form-wrap">
+        <h3>Send a message</h3>
+        <p class="contact-form-note">Prefer a form? Fill this in and I'll get back to you at the email you provide.</p>
+
+        <form id="contactForm" novalidate="">
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" aria-describedby="cf-name-error" required="">
+            <span class="form-error" id="cf-name-error" role="alert"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" aria-describedby="cf-email-error" required="">
+            <span class="form-error" id="cf-email-error" role="alert"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" aria-describedby="cf-message-error" required=""></textarea>
+            <span class="form-error" id="cf-message-error" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<!-- Behaviour (section switching + form handling) lives in script.js -->
+<script src="./Webpage, Complete_files/script.js.download"></script>
+
+
+<script async="" src="./Webpage, Complete_files/hud" data-nf-variant="public" data-netlify-site-id="b29389ee-cc8b-425e-9997-7caff94756d2" data-app-host="app.netlify.com"></script>
+<iframe id="nl-badge-frame" title="Powered by Netlify" style="position: fixed; bottom: 0px; right: 0px; border: 0px; margin: 0px; padding: 0px; background: transparent; color-scheme: dark; z-index: 2147483645; width: 196px; height: 63px; clip-path: path(&quot;M 3 3 H 183 V 50 H 3 Z&quot;);" data-nl-ready="1" src="./Webpage, Complete_files/saved_resource.html"></iframe></body></html>

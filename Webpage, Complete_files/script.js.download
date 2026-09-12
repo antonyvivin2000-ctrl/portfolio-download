@@ -1,0 +1,136 @@
+/* =========================================================
+   PORTFOLIO SCRIPT
+   1. Single-page section navigation (sidebar tabs)
+   2. Contact form validation + submit handling
+   ========================================================= */
+
+(function () {
+  "use strict";
+
+  /* ---------- 1. Section navigation ---------- */
+  const buttons = document.querySelectorAll(".nav-item button");
+  const sections = document.querySelectorAll(".section");
+  const mainEl = document.querySelector("main");
+
+  function showSection(id) {
+    sections.forEach((s) => s.classList.toggle("active", s.id === id));
+
+    buttons.forEach((b) => {
+      const isActive = b.dataset.target === id;
+      b.classList.toggle("active", isActive);
+      // aria-current tells assistive tech which tab represents the
+      // currently visible section; the CSS active state is driven by
+      // this attribute too, so visuals and semantics can't drift apart.
+      if (isActive) {
+        b.setAttribute("aria-current", "page");
+      } else {
+        b.removeAttribute("aria-current");
+      }
+    });
+
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    // Move focus to the newly shown section so keyboard/screen-reader
+    // users land on the new content instead of staying on the sidebar.
+    const activeSection = document.getElementById(id);
+    if (activeSection) {
+      activeSection.setAttribute("tabindex", "-1");
+      activeSection.focus({ preventScroll: true });
+    }
+
+    // Keep the URL hash in sync so a link/bookmark can reopen a section.
+    if (history.replaceState) {
+      history.replaceState(null, "", "#" + id);
+    }
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => showSection(btn.dataset.target));
+  });
+
+  // Also expose showSection globally since inline onclick="showSection(...)"
+  // handlers are used on the hero buttons.
+  window.showSection = showSection;
+
+  // Respect a direct link like index.html#projects on first load.
+  const initialId = window.location.hash.replace("#", "");
+  if (initialId && document.getElementById(initialId)) {
+    showSection(initialId);
+  }
+
+  /* ---------- 2. Contact form ---------- */
+  const form = document.getElementById("contactForm");
+
+  if (form) {
+    const nameInput = document.getElementById("cf-name");
+    const emailInput = document.getElementById("cf-email");
+    const messageInput = document.getElementById("cf-message");
+    const statusEl = document.getElementById("cf-status");
+
+    function setError(input, message) {
+      const errorEl = document.getElementById(input.id + "-error");
+      if (errorEl) errorEl.textContent = message || "";
+      input.setAttribute("aria-invalid", message ? "true" : "false");
+    }
+
+    function isValidEmail(value) {
+      // Simple, permissive pattern — good enough for client-side sanity
+      // checking; real validation always happens on whatever backend
+      // ultimately receives the message.
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let valid = true;
+
+      if (!nameInput.value.trim()) {
+        setError(nameInput, "Please enter your name.");
+        valid = false;
+      } else {
+        setError(nameInput, "");
+      }
+
+      if (!emailInput.value.trim()) {
+        setError(emailInput, "Please enter your email.");
+        valid = false;
+      } else if (!isValidEmail(emailInput.value.trim())) {
+        setError(emailInput, "Please enter a valid email address.");
+        valid = false;
+      } else {
+        setError(emailInput, "");
+      }
+
+      if (!messageInput.value.trim()) {
+        setError(messageInput, "Please enter a message.");
+        valid = false;
+      } else {
+        setError(messageInput, "");
+      }
+
+      if (!valid) {
+        statusEl.textContent = "Please fix the highlighted fields.";
+        statusEl.className = "form-status error";
+        return;
+      }
+
+      /*
+       * NOTE FOR DEPLOYMENT:
+       * This form currently only simulates a successful submission —
+       * there is no backend wired up, so messages are not actually sent
+       * anywhere yet. Before going live, connect it to a real endpoint,
+       * for example:
+       *   - Formspree (https://formspree.io) — set form action to your
+       *     Formspree endpoint and remove preventDefault(), OR
+       *   - EmailJS (https://www.emailjs.com) — call emailjs.send(...)
+       *     here with your service/template IDs, OR
+       *   - Your own serverless function / API route that emails you.
+       */
+      statusEl.textContent =
+        "Thanks! Your message has been captured locally — connect a backend (e.g. Formspree/EmailJS) to actually deliver it.";
+      statusEl.className = "form-status success";
+      form.reset();
+    });
+  }
+})();
